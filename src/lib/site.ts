@@ -3,5 +3,5 @@ export const site = {
   author: "Rahul",
   description: "A growing gallery of accessible, typed React components built for the LofiStack 90 Day Build Challenge.",
   /** Public repo, used for "View source" links. */
-  repo: "https://github.com/OWNER/lofistack-components",
+  repo: "https://github.com/Rahul-Chak-20/lofistack-components",
 };
