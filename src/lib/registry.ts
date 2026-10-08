@@ -34,7 +34,7 @@ export const components: ComponentEntry[] = [
     type: "table",
     week: 2,
     description:
-      "A typed, generic table with sortable columns, search, pagination and row selection. Includes loading skeletons, empty and no-match states, compact density and full keyboard and screen reader support.",
+      "A typed, generic data grid with multi-column sorting, search, filter menus, column toggles, expandable rows, row selection with bulk actions, CSV export, totals, a sticky header and numbered pagination. Includes loading, empty and no-match states.",
     file: "data-table",
   },
 ];
