@@ -11,6 +11,7 @@ Stack: Next.js (App Router) + TypeScript + Tailwind CSS, deployed on Vercel.
 |---|---|---|---|
 | 1 | Magnetic Glow Button | button | `/components/magnetic-button` |
 | 1 | Floating Label Input | input | `/components/floating-label-input` |
+| 2 | Data Table | table | `/components/data-table` |
 
 ## Run locally
 

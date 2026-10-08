@@ -28,6 +28,15 @@ export const components: ComponentEntry[] = [
       "A text field whose label floats out of the way on focus, with built-in validation, error and success states, helper text, a character counter and a password reveal toggle.",
     file: "floating-label-input",
   },
+  {
+    slug: "data-table",
+    name: "Data Table",
+    type: "table",
+    week: 2,
+    description:
+      "A typed, generic table with sortable columns, search, pagination and row selection. Includes loading skeletons, empty and no-match states, compact density and full keyboard and screen reader support.",
+    file: "data-table",
+  },
 ];
 
 export function getComponent(slug: string): ComponentEntry {
