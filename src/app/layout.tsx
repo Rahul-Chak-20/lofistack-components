@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
+import { SiteHeader } from "@/components/gallery/site-header";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -32,29 +32,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <header className="border-b border-white/5">
-          <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 sm:px-6" aria-label="Main">
-            <Link href="/" className="flex items-center gap-2 font-semibold text-white">
-              <span className="grid size-7 place-items-center rounded-lg bg-violet-500/20 text-violet-300" aria-hidden="true">
-                ◐
-              </span>
-              {site.name}
-            </Link>
-            <a
-              href={site.repo}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-zinc-400 transition hover:text-white"
-            >
-              GitHub ↗
-            </a>
-          </nav>
-        </header>
+        <SiteHeader />
         <div id="content" className="flex flex-1 flex-col">
           {children}
         </div>
-        <footer className="border-t border-white/5 py-6 text-center text-xs text-zinc-500">
-          Built by {site.author} for the LofiStack 90 Day Build Challenge.
+        <footer className="border-t border-white/[0.06]">
+          <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-4 py-6 text-xs text-zinc-500 sm:flex-row sm:px-6">
+            <p>
+              Built by <span className="text-zinc-300">{site.author}</span> for the LofiStack 90 Day Build Challenge.
+            </p>
+            <a href={site.repo} target="_blank" rel="noreferrer" className="transition hover:text-zinc-300">
+              Source on GitHub ↗
+            </a>
+          </div>
         </footer>
       </body>
     </html>
