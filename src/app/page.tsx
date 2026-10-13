@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ComponentThumb } from "@/components/gallery/component-thumb";
 import { GitHubIcon } from "@/components/gallery/site-header";
+import { SiteSearchTrigger } from "@/components/gallery/site-search";
 import { components } from "@/lib/registry";
 import { site } from "@/lib/site";
 
@@ -60,6 +61,8 @@ export default function Home() {
               </li>
             ))}
           </ul>
+
+          <SiteSearchTrigger className="mx-auto mt-8 max-w-md" />
         </div>
       </section>
 

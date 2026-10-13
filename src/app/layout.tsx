@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SiteHeader } from "@/components/gallery/site-header";
+import { SiteSearchProvider } from "@/components/gallery/site-search";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
+        <SiteSearchProvider>
         <SiteHeader />
         <div id="content" className="flex flex-1 flex-col">
           {children}
@@ -46,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </a>
           </div>
         </footer>
+        </SiteSearchProvider>
       </body>
     </html>
   );
