@@ -37,6 +37,15 @@ export const components: ComponentEntry[] = [
       "A typed, generic data grid with multi-column sorting, search, filter menus, column toggles, expandable rows, row selection with bulk actions, CSV export, totals, a sticky header and numbered pagination. Includes loading, empty and no-match states.",
     file: "data-table",
   },
+  {
+    slug: "memory-match",
+    name: "Memory Match",
+    type: "card game",
+    week: 2,
+    description:
+      "A memory card game with 3D flip cards, a configurable deck and board size, a move counter, a timer, a saved best score and a win celebration. Fully playable with the keyboard, announced to screen readers, and calm under reduced motion.",
+    file: "memory-match",
+  },
 ];
 
 export function getComponent(slug: string): ComponentEntry {

@@ -50,5 +50,18 @@ export function ComponentThumb({ type }: { type: string }) {
     );
   }
 
+  if (type === "card game") {
+    const back = "bg-gradient-to-br from-violet-500 via-violet-600 to-fuchsia-700 border-violet-300/20";
+    return (
+      <div className="flex gap-2.5">
+        <div className={`h-20 w-14 -rotate-6 rounded-lg border shadow-lg transition duration-300 group-hover:-rotate-12 ${back}`} />
+        <div className="grid h-20 w-14 -translate-y-2 place-items-center rounded-lg border border-emerald-400/60 bg-zinc-900 text-2xl shadow-[0_0_22px_-4px_rgba(52,211,153,0.6)] transition duration-300 group-hover:-translate-y-3">
+          🚀
+        </div>
+        <div className={`h-20 w-14 rotate-6 rounded-lg border shadow-lg transition duration-300 group-hover:rotate-12 ${back}`} />
+      </div>
+    );
+  }
+
   return <div className="size-16 rounded-2xl border border-white/10 bg-white/5" />;
 }
