@@ -63,5 +63,33 @@ export function ComponentThumb({ type }: { type: string }) {
     );
   }
 
+  if (type === "command palette") {
+    const rows = [
+      ["⌂", "w-20", true],
+      ["◐", "w-24", false],
+      ["⧉", "w-16", false],
+    ] as const;
+    return (
+      <div className="w-56 overflow-hidden rounded-xl border border-white/10 bg-zinc-950/90 text-[10px] shadow-[0_16px_40px_-12px_rgba(0,0,0,0.8)] transition duration-300 group-hover:-translate-y-1">
+        <div className="flex items-center gap-2 border-b border-white/10 px-3 py-2 text-zinc-300">
+          <span className="text-zinc-500">⌕</span>
+          <span>
+            the<span className="ml-0.5 inline-block h-2.5 w-px translate-y-0.5 animate-pulse bg-violet-300 motion-reduce:animate-none" />
+          </span>
+          <span className="ml-auto rounded border border-white/10 bg-white/5 px-1 text-[9px] text-zinc-400">⌘K</span>
+        </div>
+        <div className="space-y-0.5 p-1.5">
+          {rows.map(([icon, w, on], i) => (
+            <div key={i} className={`relative flex items-center gap-2 rounded-lg px-2 py-1.5 ${on ? "bg-white/[0.07]" : ""}`}>
+              {on && <span className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-violet-400" />}
+              <span className={`grid size-4 place-items-center rounded ${on ? "bg-violet-500/20 text-violet-200" : "bg-white/5 text-zinc-500"}`}>{icon}</span>
+              <span className={`h-1.5 rounded-full ${on ? "bg-zinc-400" : "bg-zinc-700"} ${w}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return <div className="size-16 rounded-2xl border border-white/10 bg-white/5" />;
 }

@@ -46,6 +46,15 @@ export const components: ComponentEntry[] = [
       "A memory card game with 3D flip cards, a configurable deck and board size, a move counter, a timer, a saved best score and a win celebration. Fully playable with the keyboard, announced to screen readers, and calm under reduced motion.",
     file: "memory-match",
   },
+  {
+    slug: "command-palette",
+    name: "Command Palette",
+    type: "command palette",
+    week: 3,
+    description:
+      "A Ctrl+K / ⌘K command menu with fuzzy search and match highlighting, grouped results, nested pages with breadcrumbs, remembered recent commands and global shortcut chords. Built on the ARIA combobox pattern with full keyboard control and a focus-trapped dialog.",
+    file: "command-palette",
+  },
 ];
 
 export function getComponent(slug: string): ComponentEntry {
